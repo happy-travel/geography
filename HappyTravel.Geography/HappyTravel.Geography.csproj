@@ -6,6 +6,7 @@
     <Company>HappyTravel</Company>
     <Authors>Kirill Taran</Authors>
     <Description>Geography primitives for the API and Postgres interactions, and methods for work with them</Description>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

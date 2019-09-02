@@ -4,11 +4,11 @@ namespace HappyTravel.Geography
 {
     public static class Calculator
     {
-        public static double CalculateDistance(in GeoPoint geoPoint1, in GeoPoint geoPoint2)
-            => CalculateDistance(geoPoint1.Longitude, geoPoint1.Latitude, geoPoint2.Longitude, geoPoint2.Latitude);
+        public static double Distance(in GeoPoint geoPoint1, in GeoPoint geoPoint2)
+            => Distance(geoPoint1.Longitude, geoPoint1.Latitude, geoPoint2.Longitude, geoPoint2.Latitude);
 
 
-        public static double CalculateDistance(double longitude1, double latitude1, double longitude2, double latitude2)
+        public static double Distance(double longitude1, double latitude1, double longitude2, double latitude2)
         {
             var latitudeDelta = ToRadians(latitude2 - latitude1);
             var longitudeDelta = ToRadians(longitude2 - longitude1);
