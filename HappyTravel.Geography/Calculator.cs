@@ -1,4 +1,5 @@
 ﻿using System;
+using static HappyTravel.Geography.GeoConstants;
 
 namespace HappyTravel.Geography
 {
@@ -29,8 +30,5 @@ namespace HappyTravel.Geography
 
             double ToRadians(double target) => target * Math.PI / 180;
         }
-
-
-        private const int EarthRadiusInKm = 6371;
     }
 }
