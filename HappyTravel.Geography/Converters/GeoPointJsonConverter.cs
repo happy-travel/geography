@@ -30,8 +30,8 @@ namespace HappyTravel.Geography.Converters
 
             var jObject = JObject.Load(reader);
 
-            var latitude = .0;
-            var longitude = .0;
+            double latitude = default;
+            double longitude = default;
             foreach (var child in jObject.Children())
             {
                 var name = child.First.Path;
@@ -50,8 +50,8 @@ namespace HappyTravel.Geography.Converters
         }
 
 
-        private static readonly HashSet<string> LatitudeSynonyms = new HashSet<string>{"latitude", "lat"};
-        private static readonly HashSet<string> LongitudeSynonyms = new HashSet<string>{"longitude", "lon", "lng"};
+        private static readonly HashSet<string> LatitudeSynonyms = new HashSet<string>{"Latitude", "latitude", "Lat", "lat"};
+        private static readonly HashSet<string> LongitudeSynonyms = new HashSet<string>{"Longitude", "longitude", "Lon", "lon", "Lng", "lng"};
 
 
         public override bool CanConvert(Type objectType) => objectType == typeof(GeoPoint);
