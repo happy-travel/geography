@@ -28,7 +28,7 @@ namespace HappyTravel.Geography
             return EarthRadiusInKm * angularDistance * 1000;
 
 
-            double ToRadians(double target) => target * Math.PI / 180;
+            static double ToRadians(double target) => target * Math.PI / 180;
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using GeoAPI.Geometries;
 using HappyTravel.Geography.Converters;
+using NetTopologySuite.Geometries;
 using Newtonsoft.Json;
 
 namespace HappyTravel.Geography
@@ -17,7 +17,7 @@ namespace HappyTravel.Geography
         }
 
 
-        public GeoPoint(IPoint point)
+        public GeoPoint(Point point)
         {
             Latitude = point.Y;
             Longitude = point.X;
