@@ -12,19 +12,16 @@ jobs:
     name: Update NuGet
     steps:
     - uses: actions/checkout@v1
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '3.0.100'
+
+    - name: Install NuGet client
+      uses: nuget/setup-nuget@v1
+
+    - name: Add private GitHub registry to NuGet
+      run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/happy-travel/index.json -Username happy-travel -Password ${{ secrets.GITHUB_TOKEN }}
+
     - name: Build solution and generate NuGet package
       run: dotnet build --configuration Release
       shell: bash
-
-    - name: Install NuGet client
-      uses: warrenbuckley/Setup-Nuget@v1
-
-    - name: Add private GitHub registry to NuGet
-      run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/happy-travel/index.json -Username gans13 -Password ${{ secrets.GITHUB_TOKEN }}
 
     - name: Push generated package to GitHub registry
       run: nuget push ..\geography\HappyTravel.Geography\bin\Release\*.nupkg -Source "GPR" -SkipDuplicate
