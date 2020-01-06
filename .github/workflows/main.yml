@@ -17,5 +17,14 @@ jobs:
       with:
         dotnet-version: '3.0.100'
     - name: Build solution and generate NuGet package
-      run: dotnet build --configuration Release --version-suffix prerelease-$(date +%Y%m%d%H%M%S)
+      run: dotnet build --configuration Release
       shell: bash
+
+    - name: Install NuGet client
+      uses: warrenbuckley/Setup-Nuget@v1
+
+    - name: Add private GitHub registry to NuGet
+      run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/happy-travel/index.json -Username happy-travel -Password ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Push generated package to GitHub registry
+      run: nuget push ..\geography\HappyTravel.Geography\bin\Release\*.nupkg -Source "GPR" -SkipDuplicate
