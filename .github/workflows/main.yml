@@ -17,5 +17,5 @@ jobs:
       with:
         dotnet-version: '3.0.100'
     - name: Build solution and generate NuGet package
-      run: |  
-        dotnet pack -c Release -o out
+      run: dotnet build --configuration Release --version-suffix prerelease-$(date +%Y%m%d%H%M%S)
+      shell: bash
