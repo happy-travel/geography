@@ -1,18 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFrameworks>netcoreapp3.0;netcoreapp3.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Company>HappyTravel</Company>
     <Authors>Kirill Taran</Authors>
     <Description>Geography primitives for the API and Postgres interactions, and methods for work with them</Description>
-    <Version>1.1.0</Version>
-    <PackageReleaseNotes>- SpatialReferenceId constant have been added</PackageReleaseNotes>
+    <Version>1.1.1</Version>
+    <PackageReleaseNotes>- .Net Core 3.1 support</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="3.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="3.1.2" />
   </ItemGroup>
 
 </Project>
