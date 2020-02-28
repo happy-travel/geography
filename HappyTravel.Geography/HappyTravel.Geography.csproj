@@ -7,6 +7,9 @@
     <Authors>Kirill Taran</Authors>
     <Description>Geography primitives for the API and Postgres interactions, and methods for work with them</Description>
     <Version>1.1.1</Version>
+    <PackageReleaseNotes>- SpatialReferenceId constant have been added</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/happy-travel/geography</PackageProjectUrl>
+    <RepositoryURL>https://github.com/happy-travel/geography</RepositoryURL>   
     <PackageReleaseNotes>- .Net Core 3.1 support</PackageReleaseNotes>
   </PropertyGroup>
 
