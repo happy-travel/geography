@@ -6,7 +6,7 @@
     <Company>HappyTravel</Company>
     <Authors>Kirill Taran</Authors>
     <Description>Geography primitives for the API and Postgres interactions, and methods for work with them</Description>
-    <Version>1.2.1</Version>
+    <Version>1.3.0</Version>
     <PackageReleaseNotes>- SpatialReferenceId constant have been added</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/happy-travel/geography</PackageProjectUrl>
     <RepositoryURL>https://github.com/happy-travel/geography</RepositoryURL>   
@@ -14,6 +14,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="2.0.4" />
+    <PackageReference Include="NetTopologySuite.IO.GeoJSON4STJ" Version="2.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="3.1.4" />
   </ItemGroup>
